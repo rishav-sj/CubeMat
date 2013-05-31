@@ -29,7 +29,6 @@ public class Parser
 		
 		NodeList dList = doc.getElementsByTagName("dimension");
 		int l=dList.getLength();
-		System.out.println("l="+l);
 		for(int i=0;i<l;i++)
 		{
 	
