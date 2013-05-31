@@ -1,4 +1,0 @@
-Supported Measures:
-SUM, AVG, MIN, MAX, RANGE, U_COUNT
-
-Mathematical expressions over fieldnames are permitted as fields for these measures
