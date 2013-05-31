@@ -1,0 +1,15 @@
+Schema : Hashtable from String (dimension-name) to Dimension
+
+class Dimension
+{
+	List<field> L_field;
+	String D_type; 
+
+
+}
+
+class field
+{
+	String name;
+		
+}
