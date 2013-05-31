@@ -33,8 +33,8 @@
 	
 
 	<measure>
-		<type>U_COUNT</type>
-		<field>Day</field>
+		<name>U_COUNT</name>
+		<function>Day</function>
 	</measure>
 
 </schema>
