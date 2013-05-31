@@ -1,0 +1,35 @@
+<schema>
+
+	<dimension>
+		<D_name>Uname</D_name>
+		<D_type>Simple</D_type>
+		<field>
+			<name>Uname</name>
+			<type>String</type>
+
+		</field>
+	</dimension>
+
+	<dimension>
+		<D_name>Date</D_name>
+		<D_type>Hierarchial</D_type>
+		<field>
+			<name>Year</name>
+			<type>Numeric</type>
+		</field>
+	
+		<field>
+			<name>Month</name>
+			<type>Numeric</type>
+
+		</field>
+
+		<field>
+			<name>Day</name>
+			<type>Numeric</type>
+
+		</field>
+	</dimension>
+	
+
+</schema>
