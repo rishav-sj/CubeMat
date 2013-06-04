@@ -100,10 +100,11 @@ public class GeneralizedCubeLattice {
 		
 	}
 	
-	public static void main(String[] args) throws ParserConfigurationException, SAXException, IOException, incorrectDimensionType, incorrectFieldType
+	
+	public Digraph getDigraph()
 	{
-		GeneralizedCubeLattice G= new GeneralizedCubeLattice("/home/user/Documents/CubeMat/doc/sampleschema.xml");
-		G.buildCubeLattice();
+		return G;
 	}
+	
 
 }
