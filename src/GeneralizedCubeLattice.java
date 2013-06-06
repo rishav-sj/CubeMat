@@ -22,13 +22,35 @@ public class GeneralizedCubeLattice {
 	
 	private static Schema schema;
 	
-	public GeneralizedCubeLattice(String xmlFileName) throws ParserConfigurationException, SAXException, IOException, incorrectDimensionType, incorrectFieldType {
+	
+	public int order(){return noOfVertices;}
+	
+	public List<Integer> entryAt(int index)
+	{
+		return TupleMap.get(index);
+	}
+	public GeneralizedCubeLattice(String xmlFileName) throws ParserConfigurationException, SAXException, IOException, incorrectDimensionType, incorrectFieldType
+	{
 		
 		schema=Parser.getSchemaFromXMLFile(xmlFileName);
+		int prod=1;
+		ArrayList<Dimension> allDim=schema.getDimensions();
 		
+		for (Dimension dim:allDim)
+		{
+			prod*=1+dim.no_of_fields();
+		}
+		
+		noOfVertices=prod;
+		
+		
+	}
+	
+
+	public GeneralizedCubeLattice(Schema inputSchema) 
+	{		
 		//Calculate Number of Vertices
-		
-		
+		schema=inputSchema;
 		int prod=1;
 		ArrayList<Dimension> allDim=schema.getDimensions();
 		

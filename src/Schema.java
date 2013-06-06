@@ -46,11 +46,19 @@ class Field
 
 class Dimension
 {
-	LinkedList<Field> allFields;
-	String D_name;
-	String D_type;
-	int no_of_fields;
+	protected LinkedList<Field> allFields;
+	protected String D_name;
+	protected String D_type;
+	protected int no_of_fields;
 	
+	public String getName()
+	{
+		return D_name;
+	}
+	public boolean isHierarchial()
+	{
+		return D_type.equalsIgnoreCase("hierarchial");
+	}
 	public int no_of_fields()
 	{
 		return no_of_fields;
@@ -88,14 +96,21 @@ class Dimension
 
 class Measure
 {
-	String m_name;
-	String m_function;
 	
-	Measure(String name,String function)
+	protected String a_function;
+	protected String m_name;
+	protected String cf;
+	
+	Measure(String name,String function,String col_fam)
 	{
 		m_name=name;
-		m_function=function;
+		a_function=function;
+		cf=col_fam;
 	}
+	
+	public String cf(){return cf;}
+	public String m_name(){return m_name;}
+	public String a_function(){return a_function;}
 }
 
 public class Schema {

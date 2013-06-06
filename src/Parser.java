@@ -56,9 +56,10 @@ public class Parser
 		for (int k=0;k<ml;k++)
 		{
 			Element em = (Element)mList.item(k);
+			String colfam = em.getElementsByTagName("cf").item(0).getTextContent();
 			String mname = em.getElementsByTagName("name").item(0).getTextContent();
 			String mfun = em.getElementsByTagName("function").item(0).getTextContent();
-			Measure M = new Measure(mname, mfun);
+			Measure M = new Measure(mname, mfun,colfam);
 			finalSchema.addMeasure(M);
 		}
 		return finalSchema;
